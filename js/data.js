@@ -2,8 +2,8 @@ export const NAV_ITEMS = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "results", label: "Results" },
-  { id: "posts", label: "Posts" },
+  //{ id: "results", label: "Results" },
+  //{ id: "posts", label: "Posts" },
   { id: "contact", label: "Contact" }
 ];
 

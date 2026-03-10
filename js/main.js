@@ -59,14 +59,14 @@ const getFilteredPosts = () =>
   
   const initContent = () => {
     renderNav(NAV_ITEMS);
-    renderHeroMeta(PROFILE.heroMeta);
-    renderMiniStats(PROFILE.miniStats);
+    //renderHeroMeta(PROFILE.heroMeta);
+    //renderMiniStats(PROFILE.miniStats);
     renderAbout(PROFILE);
     renderExperience(EXPERIENCE);
     renderProjects(PROJECTS, handleProjectOpen);
-    renderHighlights(HIGHLIGHTS);
-    renderPostFilters(POSTS, state.activePostCategory, handlePostFilterChange);
-    renderPosts(getFilteredPosts(), handlePostOpen);
+    //renderHighlights(HIGHLIGHTS);
+    //renderPostFilters(POSTS, state.activePostCategory, handlePostFilterChange);
+    //renderPosts(getFilteredPosts(), handlePostOpen);
     renderContactLinks(PROFILE.contact);
     setCurrentYear();
   };
