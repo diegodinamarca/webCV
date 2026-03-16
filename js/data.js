@@ -41,7 +41,7 @@ export const PROFILE = {
     { value: "Ongoing", label: "Posts, insights, and project summaries" }
   ],
   images: {
-    heroCover: "assets/images/hero_cover.jpeg",
+    heroCover: "assets/images/hero_cover.jpg",
     profile: "assets/images/profile_picture.jpeg"
   },
   contact: [
