@@ -11,7 +11,7 @@ import {
 
 import {
   renderNav,
-  renderHeroImages,
+  renderHero,
   renderHeroMeta,
   renderMiniStats,
   renderAbout,
@@ -62,7 +62,7 @@ const getFilteredPosts = () =>
   
   const initContent = () => {
     renderNav(NAV_ITEMS);
-    renderHeroImages(PROFILE.images);
+    renderHero(PROFILE);
     //renderHeroMeta(PROFILE.heroMeta);
     //renderMiniStats(PROFILE.miniStats);
     renderAbout(PROFILE);
