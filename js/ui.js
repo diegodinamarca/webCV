@@ -71,10 +71,7 @@ export const renderNav = (items) => {
 };
 
 
-export const renderHeroImages = ({
-  heroCover = "assets/images/hero-cover.svg",
-  profile = "assets/images/profile.svg"
-} = {}) => {
+export const renderHeroImages = ({ heroCover, profile }) => {
   const cover = getElement(SELECTORS.heroCover);
   const profileContainer = getElement(SELECTORS.heroProfile);
 
