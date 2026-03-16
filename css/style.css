@@ -1,22 +1,22 @@
 :root {
-  --color-darkprimary: #03346E;
-    --color-primary: #6EACDA;
-    --color-accent: #FB773C;
-    --color-text1: #021526;
-    --color-text2: #C62300;
-    --color-white: #ffffff;
-    --color-surface: #f7f9fc;
-    --color-surface-strong: #edf4fb;
-    --color-border: rgba(3, 52, 110, 0.12);
-  --color-shadow: rgba(2, 21, 38, 0.12);
+  --color-darkprimary: #0a1b3d;
+  --color-primary: #1f4f9a;
+  --color-accent: #4f89dc;
+  --color-text1: #dbe8ff;
+  --color-text2: #84b2ff;
+  --color-white: #f5f9ff;
+  --color-surface: #102444;
+  --color-surface-strong: #16305a;
+  --color-border: rgba(132, 178, 255, 0.2);
+  --color-shadow: rgba(3, 10, 24, 0.5);
   
   --container-width: 1180px;
   --radius-sm: 14px;
   --radius-md: 20px;
   --radius-lg: 28px;
   
-  --shadow-soft: 0 16px 40px rgba(2, 21, 38, 0.08);
-  --shadow-card: 0 18px 45px rgba(3, 52, 110, 0.10);
+  --shadow-soft: 0 16px 40px rgba(3, 10, 24, 0.28);
+  --shadow-card: 0 18px 45px rgba(3, 10, 24, 0.32);
   
   --transition-fast: 180ms ease;
   --transition-medium: 280ms ease;
@@ -39,9 +39,9 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--color-text1);
   background:
-    radial-gradient(circle at top left, rgba(110, 172, 218, 0.16), transparent 32%),
-  radial-gradient(circle at top right, rgba(251, 119, 60, 0.10), transparent 24%),
-  linear-gradient(180deg, #fbfdff 0%, #f3f8fd 100%);
+    radial-gradient(circle at top left, rgba(79, 137, 220, 0.22), transparent 32%),
+  radial-gradient(circle at top right, rgba(31, 79, 154, 0.2), transparent 24%),
+  linear-gradient(180deg, #081327 0%, #0e1f3d 100%);
                   line-height: 1.6;
 }
 
@@ -72,7 +72,7 @@ select {
 }
 
 .section-alt {
-  background: linear-gradient(180deg, rgba(110, 172, 218, 0.08), rgba(110, 172, 218, 0.03));
+  background: linear-gradient(180deg, rgba(79, 137, 220, 0.14), rgba(79, 137, 220, 0.04));
 }
 
 .section-accent {
@@ -115,7 +115,7 @@ select {
 .contact-card p,
 .panel-card p {
   font-size: 1.05rem;
-  color: rgba(2, 21, 38, 0.78);
+  color: rgba(219, 232, 255, 0.84);
 }
 
 .site-header {
@@ -123,8 +123,8 @@ select {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.72);
-  border-bottom: 1px solid rgba(3, 52, 110, 0.08);
+  background: rgba(8, 19, 39, 0.82);
+  border-bottom: 1px solid rgba(132, 178, 255, 0.2);
 }
 
 .header-inner {
@@ -171,14 +171,14 @@ select {
   padding: 0.75rem 1rem;
   border-radius: 999px;
   font-weight: 600;
-  color: rgba(2, 21, 38, 0.72);
+  color: rgba(219, 232, 255, 0.8);
   transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  background: rgba(110, 172, 218, 0.14);
-  color: var(--color-darkprimary);
+  background: rgba(79, 137, 220, 0.22);
+  color: var(--color-white);
   outline: none;
 }
 
@@ -192,7 +192,7 @@ select {
   width: 3rem;
   height: 3rem;
   border: 1px solid var(--color-border);
-  background: var(--color-white);
+  background: var(--color-surface-strong);
   border-radius: 16px;
   padding: 0;
   cursor: pointer;
@@ -232,7 +232,7 @@ select {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(3, 52, 110, 0.28), rgba(2, 21, 38, 0.52));
+  background: linear-gradient(180deg, rgba(10, 27, 61, 0.5), rgba(5, 13, 30, 0.74));
   z-index: 0;
 }
 
@@ -305,8 +305,8 @@ select {
 }
 
 .intro-card {
-  background: #faf8f4;
-  border: 1px solid rgba(3, 52, 110, 0.08);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   padding: clamp(4.5rem, 9vw, 5.8rem) clamp(1.2rem, 4.2vw, 3.5rem) clamp(2rem, 5vw, 3rem);
@@ -326,7 +326,7 @@ select {
 .intro-card p {
   margin: 1.2rem auto 0;
   max-width: 64ch;
-  color: rgba(2, 21, 38, 0.76);
+  color: rgba(219, 232, 255, 0.82);
 }
 
 .intro-signature {
@@ -342,8 +342,8 @@ select {
 .post-card,
 .highlight-card,
 .timeline-card {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(3, 52, 110, 0.08);
+  background: rgba(16, 36, 68, 0.92);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-lg);
 }
@@ -358,7 +358,7 @@ select {
   margin-bottom: 1rem;
   border-radius: 999px;
   padding: 4px;
-  background: linear-gradient(135deg, rgba(110, 172, 218, 0.9), rgba(251, 119, 60, 0.72));
+  background: linear-gradient(135deg, rgba(79, 137, 220, 0.95), rgba(31, 79, 154, 0.8));
 }
 
 .profile-image {
@@ -393,7 +393,7 @@ select {
 .mini-stat {
   padding: 1rem;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(110, 172, 218, 0.14), rgba(251, 119, 60, 0.08));
+  background: linear-gradient(135deg, rgba(79, 137, 220, 0.2), rgba(31, 79, 154, 0.12));
 }
 
 .mini-stat strong {
@@ -403,7 +403,7 @@ select {
 }
 
 .mini-stat span {
-  color: rgba(2, 21, 38, 0.72);
+  color: rgba(219, 232, 255, 0.78);
   font-size: 0.92rem;
 }
 
@@ -431,8 +431,8 @@ select {
   align-items: center;
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  background: rgba(110, 172, 218, 0.16);
-  color: var(--color-darkprimary);
+  background: rgba(79, 137, 220, 0.2);
+  color: var(--color-white);
   font-weight: 600;
   font-size: 0.92rem;
 }
@@ -459,7 +459,7 @@ select {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, var(--color-primary), rgba(110, 172, 218, 0.1));
+  background: linear-gradient(180deg, var(--color-accent), rgba(79, 137, 220, 0.1));
 }
 
 .timeline-card {
@@ -476,7 +476,7 @@ select {
   height: 1rem;
   border-radius: 999px;
   background: var(--color-accent);
-  box-shadow: 0 0 0 6px rgba(251, 119, 60, 0.12);
+  box-shadow: 0 0 0 6px rgba(79, 137, 220, 0.2);
 }
 
 .item-meta {
@@ -484,7 +484,7 @@ select {
   flex-wrap: wrap;
   gap: 0.7rem 1rem;
   margin-bottom: 0.7rem;
-  color: rgba(2, 21, 38, 0.62);
+  color: rgba(219, 232, 255, 0.68);
   font-size: 0.92rem;
 }
 
@@ -540,7 +540,7 @@ select {
 }
 
 .card-text {
-  color: rgba(2, 21, 38, 0.74);
+  color: rgba(219, 232, 255, 0.8);
   margin: 0 0 1rem;
 }
 
@@ -576,7 +576,7 @@ select {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 0.8rem;
-  color: rgba(2, 21, 38, 0.56);
+  color: rgba(219, 232, 255, 0.62);
   font-size: 0.88rem;
 }
 
@@ -589,8 +589,8 @@ select {
 
 .filter-button {
   border: 1px solid rgba(3, 52, 110, 0.16);
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--color-darkprimary);
+  background: rgba(16, 36, 68, 0.9);
+  color: var(--color-white);
   border-radius: 999px;
   padding: 0.65rem 0.95rem;
   font-weight: 600;
@@ -620,7 +620,7 @@ select {
 
 .highlight-card p {
   margin: 0;
-  color: rgba(2, 21, 38, 0.72);
+  color: rgba(219, 232, 255, 0.78);
 }
 
 .contact-card {
@@ -628,7 +628,7 @@ select {
   grid-template-columns: 1.2fr 1fr;
   gap: 1.5rem;
   align-items: center;
-  background: linear-gradient(135deg, var(--color-darkprimary), #0b4a94);
+  background: linear-gradient(135deg, var(--color-darkprimary), #163f7b);
                               color: var(--color-white);
                               box-shadow: 0 22px 50px rgba(3, 52, 110, 0.24);
 }
@@ -684,7 +684,7 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  color: rgba(2, 21, 38, 0.65);
+  color: rgba(219, 232, 255, 0.72);
   font-size: 0.95rem;
 }
 
@@ -726,7 +726,7 @@ select {
   max-height: 90vh;
   overflow: auto;
   border-radius: 28px;
-  background: var(--color-white);
+  background: var(--color-surface-strong);
   box-shadow: 0 24px 60px rgba(2, 21, 38, 0.28);
 }
 
@@ -754,7 +754,7 @@ select {
 }
 
 .modal-content p {
-  color: rgba(2, 21, 38, 0.78);
+  color: rgba(219, 232, 255, 0.82);
 }
 
 @media (max-width: 1024px) {
@@ -777,8 +777,8 @@ select {
     top: calc(100% + 0.5rem);
     right: 1rem;
     width: min(320px, calc(100% - 2rem));
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(3, 52, 110, 0.08);
+    background: rgba(16, 36, 68, 0.98);
+    border: 1px solid var(--color-border);
     border-radius: 22px;
     box-shadow: var(--shadow-card);
     padding: 0.6rem;
