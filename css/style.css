@@ -335,7 +335,7 @@ select {
 }
 
 .hero-intro {
-  background: linear-gradient(180deg, #f6f3ee 0%, #fbf8f4 100%);
+  background: var(--color-surface);
   padding-top: 0;
 }
 
@@ -350,7 +350,7 @@ select {
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 999px;
-  border: 6px solid #fbf8f4;
+  border: 6px solid var(--color-surface);
   box-shadow: var(--shadow-card);
   margin-top: clamp(-90px, -12vw, -120px);
   z-index: 2;
