@@ -212,9 +212,30 @@ select {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cover {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(251, 253, 255, 0.86), rgba(243, 248, 253, 0.94));
+  z-index: 0;
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.25fr 0.85fr;
   gap: 2rem;
@@ -315,6 +336,23 @@ select {
 
 .panel-card {
   padding: 2rem;
+}
+
+.profile-image-wrap {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  padding: 4px;
+  background: linear-gradient(135deg, rgba(110, 172, 218, 0.9), rgba(251, 119, 60, 0.72));
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .panel-label {

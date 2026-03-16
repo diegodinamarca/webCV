@@ -9,6 +9,7 @@ import {
 
 import {
   renderNav,
+  renderHeroImages,
   renderHeroMeta,
   renderMiniStats,
   renderAbout,
@@ -59,6 +60,7 @@ const getFilteredPosts = () =>
   
   const initContent = () => {
     renderNav(NAV_ITEMS);
+    renderHeroImages(PROFILE.images);
     //renderHeroMeta(PROFILE.heroMeta);
     //renderMiniStats(PROFILE.miniStats);
     renderAbout(PROFILE);

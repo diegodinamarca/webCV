@@ -35,6 +35,10 @@ export const PROFILE = {
     { value: "20+", label: "Projects, scripts, and modelling workflows" },
     { value: "Ongoing", label: "Posts, insights, and project summaries" }
   ],
+  images: {
+    heroCover: "assets/images/hero-cover.svg",
+    profile: "assets/images/profile.svg"
+  },
   contact: [
     { label: "Email", value: "diegodinamarca@email.com", href: "mailto:diegodinamarca@email.com" },
     { label: "LinkedIn", value: "linkedin.com/in/diegodinamarca", href: "#" },
