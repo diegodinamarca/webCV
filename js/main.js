@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 import {
   NAV_ITEMS,
   PROFILE,
