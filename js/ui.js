@@ -14,7 +14,9 @@ const SELECTORS = {
   currentYear: "#current-year",
   navToggle: ".nav-toggle",
   siteNav: ".site-nav",
-  reveal: ".reveal"
+  reveal: ".reveal",
+  heroCover: "#hero-cover",
+  heroProfile: "#hero-profile"
 };
 
 export const getElement = (selector, scope = document) => scope.querySelector(selector);
@@ -66,6 +68,32 @@ export const renderNav = (items) => {
   });
   
   clearAndAppend(navList, links);
+};
+
+
+export const renderHeroImages = ({
+  heroCover = "assets/images/hero-cover.svg",
+  profile = "assets/images/profile.svg"
+} = {}) => {
+  const cover = getElement(SELECTORS.heroCover);
+  const profileContainer = getElement(SELECTORS.heroProfile);
+
+  if (cover && heroCover) {
+    cover.style.backgroundImage = `url("${heroCover}")`;
+  }
+
+  if (profileContainer && profile) {
+    profileContainer.innerHTML = "";
+    const profileImage = createElement({
+      tag: "img",
+      className: "profile-image",
+      attrs: {
+        src: profile,
+        alt: "Profile portrait"
+      }
+    });
+    profileContainer.appendChild(profileImage);
+  }
 };
 
 export const renderHeroMeta = (items) => {

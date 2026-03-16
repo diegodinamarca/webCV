@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 import {
   NAV_ITEMS,
   PROFILE,
@@ -9,6 +11,7 @@ import {
 
 import {
   renderNav,
+  renderHeroImages,
   renderHeroMeta,
   renderMiniStats,
   renderAbout,
@@ -59,8 +62,9 @@ const getFilteredPosts = () =>
   
   const initContent = () => {
     renderNav(NAV_ITEMS);
-    //renderHeroMeta(PROFILE.heroMeta);
-    //renderMiniStats(PROFILE.miniStats);
+    renderHeroImages(PROFILE.images);
+    renderHeroMeta(PROFILE.heroMeta);
+    renderMiniStats(PROFILE.miniStats);
     renderAbout(PROFILE);
     renderExperience(EXPERIENCE);
     renderProjects(PROJECTS, handleProjectOpen);
