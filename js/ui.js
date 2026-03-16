@@ -13,10 +13,15 @@ const SELECTORS = {
   contactLinks: "#contact-links",
   currentYear: "#current-year",
   navToggle: ".nav-toggle",
+  heroMenuButton: ".hero-menu-btn",
   siteNav: ".site-nav",
   reveal: ".reveal",
   heroCover: "#hero-cover",
-  heroProfile: "#hero-profile"
+  heroProfile: "#hero-profile",
+  heroTitle: "#hero-title",
+  heroSubtitle: "#hero-subtitle",
+  heroIntro: "#hero-intro",
+  heroSignature: "#hero-signature"
 };
 
 export const getElement = (selector, scope = document) => scope.querySelector(selector);
@@ -71,13 +76,26 @@ export const renderNav = (items) => {
 };
 
 
-export const renderHeroImages = ({ heroCover, profile }) => {
+export const renderHero = ({ title, heroSubtitle, heroIntro, signature, introTitle, images }) => {
+  const { heroCover, profile } = images;
   const cover = getElement(SELECTORS.heroCover);
   const profileContainer = getElement(SELECTORS.heroProfile);
 
   if (cover && heroCover) {
     cover.style.backgroundImage = `url("${heroCover}")`;
   }
+
+  const heroTitle = getElement(SELECTORS.heroTitle);
+  const subtitle = getElement(SELECTORS.heroSubtitle);
+  const intro = getElement(SELECTORS.heroIntro);
+  const signatureNode = getElement(SELECTORS.heroSignature);
+  const introHeading = document.querySelector(".intro-card h2");
+
+  if (heroTitle) heroTitle.textContent = title;
+  if (subtitle) subtitle.textContent = heroSubtitle;
+  if (intro) intro.textContent = heroIntro;
+  if (signatureNode) signatureNode.textContent = signature;
+  if (introHeading && introTitle) introHeading.textContent = introTitle;
 
   if (profileContainer && profile) {
     profileContainer.innerHTML = "";
@@ -319,14 +337,27 @@ export const setupNavigationBehavior = () => {
   const toggle = getElement(SELECTORS.navToggle);
   const nav = getElement(SELECTORS.siteNav);
   const navLinks = getElements(".nav-link");
-  
+  const heroMenuButton = getElement(SELECTORS.heroMenuButton);
+
   if (!toggle || !nav) return;
-  
-  toggle.addEventListener("click", () => {
+
+  const toggleMenu = () => {
     const isOpen = nav.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
-  });
-  
+  };
+
+  toggle.addEventListener("click", toggleMenu);
+
+  if (heroMenuButton) {
+    heroMenuButton.addEventListener("click", () => {
+      if (window.matchMedia("(max-width: 820px)").matches) {
+        toggleMenu();
+      } else {
+        document.querySelector(".site-header")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
+
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("is-open");
