@@ -9,7 +9,12 @@ export const NAV_ITEMS = [
 
 export const PROFILE = {
   name: "Diego Dinamarca",
-  title: "Hydrologist · Geospatial Analyst · Researcher",
+  title: "Diego Dinamarca",
+  heroSubtitle: "Hydrologist · Geospatial Analyst · Researcher",
+  introTitle: "Welcome to my site!",
+  heroIntro:
+    "I build scientific, technical, and data-driven workflows that connect hydrology, remote sensing, spatial modelling, and environmental insight. This space brings together my profile, selected work, and research-oriented reflections in a clean, personal portfolio format.",
+  signature: "— Diego",
   about:
     "I work at the intersection of hydrology, geospatial analysis, environmental modelling, and technical communication. My professional interests include spatial data workflows, remote sensing, soil and water processes, modelling support, and the clear communication of complex scientific results.",
   interests: [
