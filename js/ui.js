@@ -52,6 +52,10 @@ export const createElement = ({ tag, className, text, html, attrs = {} }) => {
 };
 
 const clearAndAppend = (container, items) => {
+  if (!container) {
+    return;
+  }
+
   container.innerHTML = "";
   items.forEach((item) => container.appendChild(item));
 };
@@ -140,7 +144,10 @@ export const renderMiniStats = (items) => {
 };
 
 export const renderAbout = ({ about, interests, strengths }) => {
-  getElement(SELECTORS.aboutSummary).textContent = about;
+  const aboutSummary = getElement(SELECTORS.aboutSummary);
+  if (aboutSummary) {
+    aboutSummary.textContent = about;
+  }
   
   const interestContainer = getElement(SELECTORS.interestTags);
   clearAndAppend(
@@ -330,7 +337,10 @@ export const renderContactLinks = (items) => {
 };
 
 export const setCurrentYear = () => {
-  getElement(SELECTORS.currentYear).textContent = String(new Date().getFullYear());
+  const yearNode = getElement(SELECTORS.currentYear);
+  if (yearNode) {
+    yearNode.textContent = String(new Date().getFullYear());
+  }
 };
 
 export const setupNavigationBehavior = () => {
@@ -414,6 +424,10 @@ export const setupRevealObserver = () => {
 
 export const openModal = ({ title, subtitle, body }) => {
   const template = getElement("#modal-template");
+  if (!template) {
+    return;
+  }
+
   const fragment = template.content.cloneNode(true);
   const overlay = fragment.querySelector("[data-modal-overlay]");
   const content = fragment.querySelector(".modal-content");
