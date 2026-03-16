@@ -36,8 +36,8 @@ export const PROFILE = {
     { value: "Ongoing", label: "Posts, insights, and project summaries" }
   ],
   images: {
-    heroCover: "assets/images/hero-cover.svg",
-    profile: "assets/images/profile.svg"
+    heroCover: "assets/images/hero_cover.jpeg",
+    profile: "assets/images/profile_picture.jpeg"
   },
   contact: [
     { label: "Email", value: "diegodinamarca@email.com", href: "mailto:diegodinamarca@email.com" },
