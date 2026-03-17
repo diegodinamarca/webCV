@@ -1,9 +1,9 @@
 :root {
   --color-darkprimary: #0a1b3d;
   --color-primary: #1f4f9a;
-  --color-accent: #4f89dc;
+  --color-accent: #ff9f43;
   --color-text1: #dbe8ff;
-  --color-text2: #84b2ff;
+  --color-text2: #ffb266;
   --color-white: #f5f9ff;
   --color-surface: #102444;
   --color-surface-strong: #16305a;
@@ -107,7 +107,7 @@ select {
 
 .section-heading h2 {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--color-darkprimary);
+  color: var(--color-white);
 }
 
 .section-lead,
@@ -140,7 +140,7 @@ select {
   align-items: center;
   gap: 0.85rem;
   font-weight: 700;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
 }
 
 .brand-mark {
@@ -202,7 +202,7 @@ select {
   display: block;
   width: 18px;
   height: 2px;
-  background: var(--color-darkprimary);
+  background: var(--color-white);
   margin: 4px auto;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
@@ -317,7 +317,7 @@ select {
 
 .intro-card h2 {
   margin: 0;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.11em;
   font-size: clamp(1.1rem, 2.3vw, 1.7rem);
@@ -380,7 +380,7 @@ select {
 
 .panel-card h2 {
   margin: 0 0 1rem;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
   font-size: 1.7rem;
 }
 
@@ -398,7 +398,7 @@ select {
 
 .mini-stat strong {
   display: block;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
   font-size: 1.2rem;
 }
 
@@ -490,7 +490,7 @@ select {
 
 .item-title {
   margin: 0 0 0.4rem;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
   font-size: 1.2rem;
 }
 
@@ -517,7 +517,7 @@ select {
 
 .card-image {
   height: 180px;
-  background: linear-gradient(135deg, rgba(3, 52, 110, 0.96), rgba(110, 172, 218, 0.82));
+  background: linear-gradient(135deg, rgba(10, 27, 61, 0.96), rgba(255, 159, 67, 0.7));
   display: flex;
   align-items: flex-end;
   padding: 1.25rem;
@@ -535,7 +535,7 @@ select {
 
 .card-body h3 {
   margin: 0 0 0.65rem;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
   font-size: 1.2rem;
 }
 
@@ -615,7 +615,7 @@ select {
 .highlight-card h3 {
   margin: 0 0 0.35rem;
   font-size: 2rem;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
 }
 
 .highlight-card p {
@@ -690,7 +690,7 @@ select {
 
 .back-to-top {
   font-weight: 700;
-  color: var(--color-darkprimary);
+  color: var(--color-text2);
 }
 
 .reveal {
@@ -742,15 +742,15 @@ select {
   height: 2.7rem;
   border: 0;
   border-radius: 999px;
-  background: rgba(3, 52, 110, 0.08);
-  color: var(--color-darkprimary);
+  background: rgba(255, 159, 67, 0.2);
+  color: var(--color-white);
   font-size: 1.6rem;
   cursor: pointer;
 }
 
 .modal-content h3 {
   margin-top: 0;
-  color: var(--color-darkprimary);
+  color: var(--color-white);
 }
 
 .modal-content p {
